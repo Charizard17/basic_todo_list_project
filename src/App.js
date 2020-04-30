@@ -54,7 +54,7 @@ class App extends Component {
   handleEdit = (id) => {
     const filteredItems = this.state.items.filter((item) => item.id !== id);
 
-    const selectedItem = this.state.items.find((item) => item.id === id);
+    const selectedItem = this.state.items.find(item => item.id === id)
 
     console.log(selectedItem);
 
@@ -62,8 +62,8 @@ class App extends Component {
       items: filteredItems,
       item: selectedItem.title,
       editItem: true,
-      id: id,
-    });
+      id: id
+    })
   };
 
   render() {
